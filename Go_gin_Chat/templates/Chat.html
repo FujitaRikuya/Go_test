@@ -1,0 +1,26 @@
+<!DOCKTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>チャットルーム（テスト）</title>
+</head>
+
+<body>
+
+  <form method="post" action="/pushed">
+
+    <p><label>チャット<br>
+    <textarea name="ChatText" cols="40" rows="5" required></textarea>
+    </label></p>
+
+
+    <p><input type="submit" name="send" value="送信する"> </p>
+  </form>
+
+{{ .text }} <br>
+
+{{ .zikoku }}
+</body>
+
+</html>
