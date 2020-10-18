@@ -15,6 +15,7 @@ type MLog struct {
 	Text string
 }
 
+//Automigrateと書くべきだった初期化関数、エラー
 func dbInit() {
 	db, err := gorm.Open("sqlite3", "test.sqlite3")
 	if err != nil {
