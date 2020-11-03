@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>サインインページ</title>
+</head>
+
+<body>
+
+  <form method="post" action="/signined">
+
+    <p><label> Username: <br>
+    <input type = "text" name="Uname" required>
+    </label></p>
+
+    <p><label> Password: <br>
+      <input type="text" name="Pass" required>
+    </label></p>
+
+
+    <p><input type="submit" name="send" value="送信する"> </p>
+  </form>
+
+  <p>
+    <a href = "/loginpage" >ログインページはこちら</a>
+  </p>
+
+  {{ .err }} <br>
+
+  signined member list <br>
+
+  {{ range .user }}
+  user : {{ .Uname }} pass : {{ .Pass }} <br>
+  {{end}}
+
+</body>
+
+</html>

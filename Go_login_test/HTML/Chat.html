@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>チャットルーム </title>
+</head>
+
+<body>
+
+  <form method="post" action="/pushed">
+
+    <p><label>名前<br>
+    <input type="text" name="Name" size="30" required></textarea>
+    </label></p>
+
+    <p><label>チャット<br>
+    <textarea name="ChatText" cols="40" rows="5" required></textarea>
+    </label></p>
+
+
+    <p><input type="submit" name="send" value="送信する"> </p>
+  </form>
+
+{{ range .text }}
+{{ .Name }} : {{ .Text }} <br>
+{{end}}
+
+<br>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ログインページ</title>
+</head>
+
+<body>
+
+  <form method="post" action="/login">
+
+    <p><label> Username: <br>
+    <input type = "text" name="Uname" required>
+    </label></p>
+
+    <p><label> Password: <br>
+      <input type="text" name="Pass" required>
+    </label></p>
+
+
+    <p><input type="submit" name="send" value="送信する"> </p>
+  </form>
+
+  <p>
+    <a href = "/"> サインインページはこちら</a>
+  </p>
+
+  {{ .err }} <br>
+
+</body>
+
+</html>
